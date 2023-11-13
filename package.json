@@ -1,0 +1,25 @@
+{
+  "name": "job-scraper",
+  "version": "1.0.0",
+  "description": "Scrapes posts from HackerNews Who Is Hiring threads using key-words to filter useful posts.\r # Product Document: HackerNews Job Posting Scraper Bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Smackface/job-scraper.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Smackface/job-scraper/issues"
+  },
+  "homepage": "https://github.com/Smackface/job-scraper#readme",
+  "dependencies": {
+    "axios": "^1.6.1",
+    "dotenv": "^16.3.1",
+    "fs": "^0.0.1-security",
+    "openai": "^4.17.4"
+  }
+}
