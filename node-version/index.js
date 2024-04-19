@@ -66,11 +66,11 @@ async function runScript(url) {
 // runs the script for each page of the thread
 setTimeout(async () => {
     const pagesToScrape = [
-        'https://news.ycombinator.com/item?id=38099086',
-        'https://news.ycombinator.com/item?id=38099086&p=2',
-        'https://news.ycombinator.com/item?id=38099086&p=3',
-        'https://news.ycombinator.com/item?id=38099086&p=4',
-        'https://news.ycombinator.com/item?id=38099086&p=5',
+        'https://news.ycombinator.com/item?id=38490811',
+        'https://news.ycombinator.com/item?id=38490811&p=2',
+        'https://news.ycombinator.com/item?id=38490811&p=3',
+        'https://news.ycombinator.com/item?id=38490811&p=4',
+        'https://news.ycombinator.com/item?id=38490811&p=5',
     ]
     for (const page of pagesToScrape) {
         await runScript(page)
