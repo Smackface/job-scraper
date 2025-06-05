@@ -18,10 +18,15 @@ var pageHTML string
 
 // SignInLinkedIn performs LinkedIn login automation with debug logs
 func SignInLinkedIn() {
-	log.Println("[DEBUG] Loading .env file...")
-	err := godotenv.Load()
-	if err != nil {
-		log.Fatal("[ERROR] Error loading .env file")
+	// Only load .env file when not running in AWS Lambda
+	if os.Getenv("AWS_LAMBDA_RUNTIME_API") == "" {
+		log.Println("[DEBUG] Loading .env file (local environment)...")
+		err := godotenv.Load()
+		if err != nil {
+			log.Fatal("[ERROR] Error loading .env file")
+		}
+	} else {
+		log.Println("[DEBUG] Skipping .env file (AWS Lambda environment)")
 	}
 
 	log.Println("[DEBUG] Creating new ChromeDP context...")

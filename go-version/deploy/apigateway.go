@@ -123,7 +123,7 @@ func (d *Deployer) setupAPIIntegration(ctx context.Context) error {
 	err = d.addLambdaPermission(ctx, 
 		"allow-api-gateway", 
 		"apigateway.amazonaws.com",
-		fmt.Sprintf("arn:aws:execute-api:%s:*:%s/*/*", d.cfg.Region, d.apiGatewayID),
+		fmt.Sprintf("arn:aws:execute-api:%s:%s:%s/*/*", d.cfg.Region, d.accountID, d.apiGatewayID),
 	)
 	if err != nil {
 		return fmt.Errorf("failed to add API Gateway permission: %w", err)

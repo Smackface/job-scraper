@@ -25,6 +25,9 @@ type Deployer struct {
 	roleName         string
 	apiName          string
 	
+	// AWS account info
+	accountID        string
+	
 	// Deployment state
 	lambdaARN        string
 	roleARN          string

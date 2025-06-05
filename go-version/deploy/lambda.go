@@ -19,7 +19,8 @@ func (d *Deployer) getAccountInfo(ctx context.Context) error {
 		return err
 	}
 	
-	fmt.Printf("   Account ID: %s\n", *result.Account)
+	d.accountID = *result.Account
+	fmt.Printf("   Account ID: %s\n", d.accountID)
 	fmt.Printf("   Region: %s\n", d.cfg.Region)
 	return nil
 }
